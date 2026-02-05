@@ -1,0 +1,18 @@
+# Core (required)
+pyyaml>=6.0
+requests>=2.31
+
+# GitHub collector
+PyGithub>=2.1
+
+# Reddit collector
+praw>=7.7
+
+# MCP server (optional — needed for Claude Code integration)
+mcp>=1.0
+
+# Discord collector (optional — disabled by default)
+# discord.py>=2.3
+
+# Twitter collector (optional — disabled by default, requires $200/mo API)
+# tweepy>=4.14

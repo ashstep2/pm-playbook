@@ -1,0 +1,59 @@
+# CLAUDE.md — [COMPANY NAME] PM Playground
+
+## What This Is
+
+A PM operating environment for [COMPANY NAME], built on [pm-playbooks](https://github.com/ashstep2/pm-playbooks). All skills are installed in `.claude/skills/` and auto-discovered by Claude Code.
+
+## Running Skills
+
+When a skill is invoked (by name or by describing a PM question):
+
+1. **Read the skill file** from `.claude/skills/`
+2. **Read all relevant `context/` files** before starting:
+   - `context/company/` — company intel
+   - `context/competitive/` — competitive landscape
+   - `context/founders/` — founder profiles
+   - `context/products/` — product analyses
+   - `context/verticals/` — market verticals
+   - `context/signals/` — auto-collected signals (see Signal Freshness below)
+3. **Follow the skill's Instructions section step by step**, producing each artifact
+4. **Write output** to `applied/` in the appropriate subdirectory
+
+## Signal Freshness Check
+
+Before running any skill, check `context/signals/` for existing signal files. Look at the timestamp in each file's header:
+
+- **If signals are less than 7 days old**: Use them as-is.
+- **If signals are older than 7 days OR `context/signals/` is empty**: Ask the user if they want to refresh signals first. To refresh:
+  ```bash
+  cd pm-playbooks && python3 -m collectors.run --config ../signals.yaml
+  ```
+- **If the user declines**: Proceed without signals — skills work fine with just the manual `context/` files.
+
+## Evidence Tags
+
+| Tag | Meaning |
+|---|---|
+| `[PUBLIC]` | From publicly available information |
+| `[TESTED]` | Verified through direct testing |
+| `[ILLUSTRATIVE]` | Hypothetical example demonstrating methodology |
+| `[SIGNAL]` | Auto-collected by collectors. Check timestamp for freshness. |
+
+## Directory Structure
+
+```
+├── CLAUDE.md              ← You are here
+├── .claude/skills/        ← All skills (auto-discovered by Claude Code)
+├── signals.yaml           ← Collector config
+├── .env                   ← API keys (not committed)
+├── pm-playbooks/          ← Git submodule: general skills + collectors
+├── skills/                ← Company-specific skill sources
+├── context/               ← Company knowledge base
+│   ├── company/
+│   ├── competitive/
+│   ├── founders/
+│   ├── products/
+│   ├── verticals/
+│   └── signals/           ← Auto-collected data
+└── applied/               ← Outputs from skill runs
+```

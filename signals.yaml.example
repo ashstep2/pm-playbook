@@ -1,0 +1,86 @@
+# signals.yaml — Configuration for pm-playbooks signal collectors
+#
+# Copy this file to your company playground repo as signals.yaml
+# and customize for your company.
+#
+# Usage:
+#   python -m collectors.run                   # Run all enabled collectors
+#   python -m collectors.run --collector github # Run one collector
+#   python -m collectors.run --dry-run          # Preview without writing files
+
+# Company information
+company:
+  name: "Your Company"
+  keywords:
+    - "your company"
+    - "your product"
+    - "your technology area"
+
+# Competitors to track across all sources
+competitors:
+  - name: "Competitor A"
+    keywords:
+      - "competitor a"
+      - "competitor a product"
+  - name: "Competitor B"
+    keywords:
+      - "competitor b"
+
+# Output configuration
+output:
+  directory: "context/signals"    # Relative to this file's location
+  evidence_tag: "SIGNAL"          # Tag applied to all collected data points
+
+# Collector-specific configuration
+# Each collector can be enabled/disabled and customized independently.
+# Collectors with requires_auth=True need env vars set (see .env.example).
+collectors:
+
+  github:
+    enabled: true
+    # output_file: "github-ecosystem.md"  # Default: github.md
+    repos:
+      - "your-org/your-repo"
+      - "your-org/another-repo"
+      # Add competitor/ecosystem repos too:
+      # - "competitor-org/their-repo"
+
+  hackernews:
+    enabled: true
+    # output_file: "hackernews-sentiment.md"
+    queries:
+      - "your company"
+      - "your technology"
+      - "competitor name"
+    lookback_days: 30
+    max_per_query: 10
+
+  reddit:
+    enabled: true
+    # output_file: "reddit-discussions.md"
+    subreddits:
+      - "MachineLearning"
+      - "your_relevant_subreddit"
+    queries:
+      - "your company"
+      - "your technology"
+    time_filter: "month"
+    max_per_subreddit: 10
+
+  news:
+    enabled: true
+    # output_file: "news-coverage.md"
+    queries:
+      - "Your Company AI"
+      - "Your CEO Name company"
+    lookback_days: 30
+    max_per_query: 10
+    language: "en"
+
+  discord:
+    enabled: false    # Requires bot token — see .env.example
+    channels: []
+
+  twitter:
+    enabled: false    # Requires $200/mo API plan — see .env.example
+    queries: []
