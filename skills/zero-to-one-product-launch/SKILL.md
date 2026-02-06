@@ -1,6 +1,8 @@
 ---
 name: zero-to-one-product-launch
 description: "Help users plan and execute a 0-to-1 product launch with a launch checklist, channel strategy, success metrics, and rollback plan."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Zero-to-One Product Launch

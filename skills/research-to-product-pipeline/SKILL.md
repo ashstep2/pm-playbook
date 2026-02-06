@@ -1,6 +1,8 @@
 ---
 name: research-to-product-pipeline
 description: "Help users translate research breakthroughs into shipped products by evaluating readiness, designing productization paths, and managing the research-to-product handoff."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Research-to-Product Pipeline

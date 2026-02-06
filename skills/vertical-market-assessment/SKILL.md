@@ -1,6 +1,8 @@
 ---
 name: vertical-market-assessment
 description: "Help users evaluate and prioritize target verticals by sizing markets, scoring attractiveness, and designing entry strategies with go-to-market sequencing."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Vertical Market Assessment

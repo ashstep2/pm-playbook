@@ -1,6 +1,8 @@
 ---
 name: platform-vs-application
 description: "Help users decide whether to build a platform, an application, or a hybrid by analyzing ecosystem dynamics, developer economics, and strategic positioning."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Platform vs Application

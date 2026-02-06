@@ -1,6 +1,8 @@
 ---
 name: customer-discovery
 description: "Help users plan and execute customer discovery — producing interview guides, recruitment strategies, synthesis frameworks, and discovery reports with validated/invalidated hypotheses."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Customer Discovery

@@ -1,6 +1,8 @@
 ---
 name: writing-prds-for-ai
 description: "Help users write PRDs for AI/ML-powered products that handle model uncertainty, define evaluation criteria instead of deterministic specs, bridge the research-to-product gap, and specify behavior for probabilistic outputs."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Writing PRDs for AI

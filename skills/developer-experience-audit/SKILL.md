@@ -1,6 +1,8 @@
 ---
 name: developer-experience-audit
 description: "Help users audit the developer experience of an API or developer product — producing a friction scorecard, time-to-hello-world analysis, documentation quality assessment, and prioritized DX improvement roadmap."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Developer Experience Audit

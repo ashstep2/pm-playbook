@@ -1,6 +1,8 @@
 ---
 name: north-star-metrics
 description: "Help users define their North Star Metric, build a metric tree of leading and lagging indicators, design a metrics dashboard, and establish a measurement cadence."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # North Star Metrics

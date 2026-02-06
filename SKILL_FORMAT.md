@@ -19,10 +19,17 @@ skills/<skill-name>/
 ---
 name: skill-name
 description: "One-sentence description of what the skill does and when to use it."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 ```
 
-The `description` field is what Claude reads to decide whether to invoke the skill. Start with "Help users [verb]..." to match Anthropic's convention.
+| Field | Required | Description |
+|---|---|---|
+| `name` | Yes | Kebab-case skill identifier |
+| `description` | Yes | One sentence starting with "Help users [verb]..." — this is what Claude reads to decide whether to invoke the skill |
+| `version` | Yes | Semver. Major = restructured skill. Minor = new principles/instructions. Patch = typos/URL fixes. |
+| `last_updated` | Yes | ISO date of last modification |
 
 ### Body Sections
 

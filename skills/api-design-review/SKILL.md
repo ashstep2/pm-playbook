@@ -1,6 +1,8 @@
 ---
 name: api-design-review
 description: "Help users review an API's design quality by assessing endpoints against REST conventions, consistency standards, and developer ergonomics — producing a per-endpoint scorecard, naming audit, error handling review, and prioritized recommendations."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # API Design Review

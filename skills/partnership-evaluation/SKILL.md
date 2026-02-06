@@ -1,6 +1,8 @@
 ---
 name: partnership-evaluation
 description: "Help users evaluate potential partnerships by scoring strategic fit, modeling deal structures, and producing comparative assessments with go/no-go recommendations."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Partnership Evaluation

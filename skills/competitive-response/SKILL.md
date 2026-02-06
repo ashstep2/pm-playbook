@@ -1,6 +1,8 @@
 ---
 name: competitive-response
 description: "Help users analyze competitive threats, classify their severity, design response strategies, and identify sustainable moats."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Competitive Response

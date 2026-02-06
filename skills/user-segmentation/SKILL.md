@@ -1,6 +1,8 @@
 ---
 name: user-segmentation
 description: "Help users define, profile, and prioritize user segments -- producing segment profiles, a prioritization matrix, and cross-segment insights that inform product strategy."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # User Segmentation

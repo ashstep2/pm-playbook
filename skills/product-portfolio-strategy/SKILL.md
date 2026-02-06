@@ -1,6 +1,8 @@
 ---
 name: product-portfolio-strategy
 description: "Help users define and prioritize a multi-product portfolio by mapping product surfaces, allocating resources across bets, and designing a sequenced roadmap."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Product Portfolio Strategy

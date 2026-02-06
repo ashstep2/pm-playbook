@@ -1,6 +1,8 @@
 ---
 name: measuring-product-market-fit
 description: "Help users measure product-market fit for new-category products by building a PMF scorecard, tracking leading signals, and making pivot/persevere decisions."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Measuring Product-Market Fit

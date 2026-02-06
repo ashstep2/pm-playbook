@@ -1,6 +1,8 @@
 ---
 name: stakeholder-alignment
 description: "Help users align cross-functional stakeholders by producing stakeholder maps, RACI matrices, communication plans, decision-making frameworks, and research-product interface designs."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Stakeholder Alignment

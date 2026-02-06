@@ -1,6 +1,8 @@
 ---
 name: pricing-and-monetization
 description: "Help users design pricing models and monetization strategy by analyzing willingness-to-pay, competitive positioning, and packaging to maximize revenue and adoption."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Pricing and Monetization

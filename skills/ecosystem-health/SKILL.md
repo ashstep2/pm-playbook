@@ -1,6 +1,8 @@
 ---
 name: ecosystem-health
 description: "Help users assess their platform ecosystem's health by scoring community engagement, developer adoption velocity, third-party integrations, and identifying growth levers."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Ecosystem Health

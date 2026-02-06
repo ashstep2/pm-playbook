@@ -1,6 +1,8 @@
 ---
 name: user-onboarding-optimization
 description: "Help users audit and optimize their product's onboarding flow by mapping the user journey, measuring time-to-value, defining activation metrics, identifying friction points, and producing an improvement roadmap."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # User Onboarding Optimization

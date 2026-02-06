@@ -9,7 +9,7 @@ A PM operating environment for [COMPANY NAME], built on [pm-playbooks](https://g
 When a skill is invoked (by name or by describing a PM question):
 
 1. **Read the skill file** from `.claude/skills/`
-2. **Read all relevant `context/` files** before starting:
+2. **Read all relevant `context/` files** if the directory exists. If missing or partially populated, ask the user for equivalent information conversationally — do not halt or error.
    - `context/company/` — company intel
    - `context/competitive/` — competitive landscape
    - `context/founders/` — founder profiles
@@ -18,6 +18,10 @@ When a skill is invoked (by name or by describing a PM question):
    - `context/signals/` — auto-collected signals (see Signal Freshness below)
 3. **Follow the skill's Instructions section step by step**, producing each artifact
 4. **Write output** to `applied/` in the appropriate subdirectory
+
+## Skill Chaining
+
+After completing any skill, check `pm-playbooks/skill-graph.yaml` for the `feeds_into` list of the skill you just ran. Briefly mention which skills would logically follow and why — for example, "Customer Discovery typically feeds into User Segmentation and Measuring PMF." Ask the user if they want to run one next. Do not force chaining — it is always the user's choice.
 
 ## Signal Freshness Check
 

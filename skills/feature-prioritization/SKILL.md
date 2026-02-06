@@ -1,6 +1,8 @@
 ---
 name: feature-prioritization
 description: "Help users prioritize features using a weighted scoring matrix, RICE framework adaptation, and sequencing analysis to produce a ranked backlog, trade-off documentation, and a sequenced roadmap."
+version: "1.0.0"
+last_updated: "2026-02-06"
 ---
 
 # Feature Prioritization

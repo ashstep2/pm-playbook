@@ -1,0 +1,199 @@
+# Skill Dependency Graph
+# Machine-readable graph of how pm-playbooks skills feed into each other.
+# Used by CLAUDE.md to suggest skill chaining after a run completes.
+#
+# Fields:
+#   category:   strategic | planning | execution | analysis
+#   feeds_into: skills that logically follow this one
+#   reads_from: skills whose output this one benefits from
+
+skills:
+  # ── Strategic ──────────────────────────────────────────────
+  product-portfolio-strategy:
+    category: strategic
+    feeds_into:
+      - feature-prioritization
+      - research-to-product-pipeline
+      - platform-vs-application
+      - pricing-and-monetization
+    reads_from:
+      - competitive-response
+      - vertical-market-assessment
+      - measuring-product-market-fit
+
+  measuring-product-market-fit:
+    category: strategic
+    feeds_into:
+      - zero-to-one-product-launch
+      - north-star-metrics
+      - user-segmentation
+    reads_from:
+      - customer-discovery
+      - user-segmentation
+
+  competitive-response:
+    category: strategic
+    feeds_into:
+      - feature-prioritization
+      - product-portfolio-strategy
+      - pricing-and-monetization
+      - platform-vs-application
+    reads_from:
+      - ecosystem-health
+      - vertical-market-assessment
+
+  research-to-product-pipeline:
+    category: strategic
+    feeds_into:
+      - writing-prds-for-ai
+      - zero-to-one-product-launch
+      - stakeholder-alignment
+    reads_from:
+      - product-portfolio-strategy
+
+  platform-vs-application:
+    category: strategic
+    feeds_into:
+      - developer-experience-audit
+      - ecosystem-health
+      - pricing-and-monetization
+    reads_from:
+      - product-portfolio-strategy
+      - competitive-response
+
+  vertical-market-assessment:
+    category: strategic
+    feeds_into:
+      - customer-discovery
+      - competitive-response
+      - pricing-and-monetization
+    reads_from:
+      - user-segmentation
+      - ecosystem-health
+
+  # ── Planning ───────────────────────────────────────────────
+  zero-to-one-product-launch:
+    category: planning
+    feeds_into:
+      - user-onboarding-optimization
+      - stakeholder-alignment
+      - north-star-metrics
+    reads_from:
+      - feature-prioritization
+      - measuring-product-market-fit
+      - writing-prds-for-ai
+
+  feature-prioritization:
+    category: planning
+    feeds_into:
+      - writing-prds-for-ai
+      - zero-to-one-product-launch
+      - stakeholder-alignment
+    reads_from:
+      - north-star-metrics
+      - competitive-response
+      - product-portfolio-strategy
+      - customer-discovery
+
+  pricing-and-monetization:
+    category: planning
+    feeds_into:
+      - feature-prioritization
+      - zero-to-one-product-launch
+    reads_from:
+      - competitive-response
+      - user-segmentation
+      - vertical-market-assessment
+
+  north-star-metrics:
+    category: planning
+    feeds_into:
+      - feature-prioritization
+      - user-onboarding-optimization
+      - measuring-product-market-fit
+    reads_from:
+      - user-segmentation
+      - customer-discovery
+
+  writing-prds-for-ai:
+    category: planning
+    feeds_into:
+      - zero-to-one-product-launch
+      - stakeholder-alignment
+    reads_from:
+      - feature-prioritization
+      - research-to-product-pipeline
+
+  # ── Execution ──────────────────────────────────────────────
+  customer-discovery:
+    category: execution
+    feeds_into:
+      - user-segmentation
+      - measuring-product-market-fit
+      - vertical-market-assessment
+      - north-star-metrics
+    reads_from: []
+
+  developer-experience-audit:
+    category: execution
+    feeds_into:
+      - api-design-review
+      - user-onboarding-optimization
+      - feature-prioritization
+    reads_from:
+      - ecosystem-health
+      - platform-vs-application
+
+  user-onboarding-optimization:
+    category: execution
+    feeds_into:
+      - north-star-metrics
+      - measuring-product-market-fit
+    reads_from:
+      - zero-to-one-product-launch
+      - user-segmentation
+      - developer-experience-audit
+
+  stakeholder-alignment:
+    category: execution
+    feeds_into: []
+    reads_from:
+      - zero-to-one-product-launch
+      - feature-prioritization
+      - research-to-product-pipeline
+
+  # ── Analysis ───────────────────────────────────────────────
+  user-segmentation:
+    category: analysis
+    feeds_into:
+      - measuring-product-market-fit
+      - pricing-and-monetization
+      - feature-prioritization
+      - north-star-metrics
+    reads_from:
+      - customer-discovery
+
+  ecosystem-health:
+    category: analysis
+    feeds_into:
+      - competitive-response
+      - partnership-evaluation
+      - developer-experience-audit
+      - platform-vs-application
+    reads_from: []
+
+  api-design-review:
+    category: analysis
+    feeds_into:
+      - developer-experience-audit
+    reads_from:
+      - developer-experience-audit
+
+  partnership-evaluation:
+    category: analysis
+    feeds_into:
+      - product-portfolio-strategy
+      - platform-vs-application
+    reads_from:
+      - ecosystem-health
+      - competitive-response
