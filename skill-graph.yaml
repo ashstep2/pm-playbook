@@ -28,6 +28,7 @@ skills:
       - zero-to-one-product-launch
       - north-star-metrics
       - user-segmentation
+      - product-narrative-strategy
     reads_from:
       - customer-discovery
       - user-segmentation
@@ -108,11 +109,15 @@ skills:
       - zero-to-one-product-launch
       - stakeholder-alignment
       - prototype-driven-validation
+      - experiment-design
+      - iteration-cadence-design
     reads_from:
       - north-star-metrics
       - competitive-response
       - product-portfolio-strategy
       - customer-discovery
+      - product-narrative-strategy
+      - product-quality-review
 
   pricing-and-monetization:
     category: planning
@@ -134,6 +139,7 @@ skills:
     reads_from:
       - user-segmentation
       - customer-discovery
+      - experiment-design
 
   writing-prds-for-ai:
     category: planning
@@ -156,6 +162,7 @@ skills:
       - feature-prioritization
       - customer-discovery
       - prototype-driven-validation
+      - iteration-cadence-design
 
   # ── Execution ──────────────────────────────────────────────
   customer-discovery:
@@ -167,6 +174,8 @@ skills:
       - north-star-metrics
       - prototype-driven-validation
       - product-narrative-strategy
+      - experiment-design
+      - product-quality-review
     reads_from: []
 
   developer-experience-audit:
@@ -191,10 +200,12 @@ skills:
       - zero-to-one-product-launch
       - user-segmentation
       - developer-experience-audit
+      - experiment-design
 
   stakeholder-alignment:
     category: execution
-    feeds_into: []
+    feeds_into:
+      - iteration-cadence-design
     reads_from:
       - zero-to-one-product-launch
       - feature-prioritization
@@ -209,10 +220,11 @@ skills:
       - stakeholder-alignment
       - zero-to-one-product-launch
       - experiment-design
-      - product-quality-review
     reads_from:
       - customer-discovery
       - feature-prioritization
+      - iteration-cadence-design
+      - product-quality-review
 
   iteration-cadence-design:
     category: execution

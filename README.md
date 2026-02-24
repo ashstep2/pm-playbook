@@ -38,6 +38,8 @@ cd pm-playbooks
 
 No configuration required. Skills work out of the box by asking for context interactively. Add a `context/` directory to ground outputs in your company's data.
 
+**New here?** Start with the [Getting Started Guide](GETTING_STARTED.md) — pick a journey that matches your situation and run it. Or browse [example outputs](examples/) to see what skills produce.
+
 ## Why This Is Different
 
 | | Generic prompts | Consulting frameworks | **pm-playbooks** |

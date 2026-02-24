@@ -5,7 +5,8 @@
       "Bash(echo === ATTRIBUTION FORMAT VIOLATIONS ===:*)",
       "Bash(tail:*)",
       "Bash(head:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(ls:*)"
     ]
   }
 }
