@@ -93,7 +93,7 @@ Produces a ranked feature backlog, trade-off documentation, and sequenced roadma
 - Score each L and N feature across all dimensions.
 - Compute the weighted score: `Score = (Reach * w1 + Impact * w2 + Confidence * w3 + Strategic Alignment * w4) / Effort`
 - For each score, record a one-sentence rationale explaining the rating. This is not optional -- unexplained scores invite political re-scoring later.
-- Flag any feature where Confidence is below 0.5 and annotate it as "Validate Before Committing."
+- Flag any feature where Confidence is below 0.5 and annotate it as "Validate Before Committing." For these low-confidence items, recommend running `prototype-driven-validation` or `experiment-design` before committing engineering resources.
 - Sort the list by weighted score, descending.
 - **Artifact produced**: Scored Feature Matrix (table with all dimensions, computed score, rationale per dimension, and rank).
 
@@ -125,10 +125,10 @@ Produces a ranked feature backlog, trade-off documentation, and sequenced roadma
   - **Compounding effects**: Feature C makes Feature D 2x more valuable. Sequence C before D.
   - **Resource constraints**: Only one ML engineer available. ML-dependent features cannot run in parallel.
   - **Learning gates**: Low-confidence features get a "validate" milestone before "build" milestone.
-- Assign features to time horizons:
-  - **Now (this quarter)**: Top 3-5 features. Committed.
-  - **Next (next quarter)**: Next 3-5 features. Planned but flexible.
-  - **Later (6+ months)**: Remaining prioritized features. Directional only.
+- Assign features to time horizons (use cycle-based horizons from `iteration-cadence-design` if available, otherwise default to calendar-based):
+  - **Now (this cycle)**: Top 3-5 features. Committed.
+  - **Next (next cycle)**: Next 3-5 features. Planned but flexible.
+  - **Later**: Remaining prioritized features. Directional only.
   - **Not Doing**: Explicitly declined features with rationale.
 - Produce a visual roadmap (text-based timeline) showing sequencing, dependencies, and the "validate vs. build" distinction.
 - **Artifact produced**: Sequenced Roadmap (timeline with features, dependencies, and time horizons) saved as `applied/prioritized-roadmap-{product}.md`.

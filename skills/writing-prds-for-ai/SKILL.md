@@ -61,6 +61,23 @@ Produces a complete product requirements document tailored for AI/ML-powered pro
 
 ## Instructions
 
+### Step 0: Decide — PRD or Prototype First?
+
+Before writing a PRD, assess whether you have enough confidence in the solution direction to commit to a spec.
+
+| Signal | PRD First | Prototype First |
+|---|---|---|
+| **Confidence in the problem** | Validated (customer discovery done) | Validated (customer discovery done) |
+| **Confidence in the solution** | High — team agrees on the approach | Low — multiple viable approaches, disagreement, or novel interaction |
+| **Prior art** | Similar features exist (internal or competitive) | No clear reference point for the user experience |
+| **Stakeholder alignment** | Aligned on direction | Divided — "we need to see it to decide" |
+| **Technical feasibility** | Known — engineering can estimate | Unknown — "we need to try it to know" |
+
+- **If confidence is high across most signals:** Proceed to Step 1 and write the PRD.
+- **If confidence is low on solution, feasibility, or stakeholder alignment:** Run `prototype-driven-validation` first. Return here with prototype findings to write a stronger PRD grounded in real user feedback.
+
+As Charlie Sutton (Atlassian CDO) puts it: "A prototype saves a thousand meetings." When in doubt, prototype first — the PRD you write after will be sharper, faster to align on, and less likely to produce rework.
+
 ### Step 1: Define the AI-Specific Problem Statement
 
 Write a problem statement that separates the user problem from the AI approach. Produce:
@@ -155,13 +172,14 @@ For each AI capability in the PRD, identify the launch level and the criteria fo
 Compile all artifacts into a single document with the following structure:
 
 1. Problem Statement (from Step 1)
-2. Evaluation Criteria (from Step 2)
-3. Failure Modes and Fallbacks (from Step 3)
-4. Data Requirements (from Step 4)
-5. Model Behavior Contract (from Step 5)
-6. Automation Ladder (from Step 6)
-7. Open Questions and Research Dependencies -- list any capabilities that depend on research results not yet available, with expected timeline and fallback if research does not deliver.
-8. Appendix: Glossary of ML terms used in the PRD, defined for non-technical stakeholders.
+2. Prototype Findings (if Step 0 directed prototyping first — include: which variations were tested, what was validated/invalidated, and how findings shaped this PRD. Reference `prototype-driven-validation` output.)
+3. Evaluation Criteria (from Step 2)
+4. Failure Modes and Fallbacks (from Step 3)
+5. Data Requirements (from Step 4)
+6. Model Behavior Contract (from Step 5)
+7. Automation Ladder (from Step 6)
+8. Open Questions and Research Dependencies -- list any capabilities that depend on research results not yet available, with expected timeline and fallback if research does not deliver.
+9. Appendix: Glossary of ML terms used in the PRD, defined for non-technical stakeholders.
 
 **Output:** A complete AI PRD saved as `applied/ai-prd-{product}.md`.
 

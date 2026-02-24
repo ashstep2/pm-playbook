@@ -27,6 +27,10 @@ After completing any skill, check `pm-playbooks/skill-graph.yaml` for the `feeds
 
 After running `developer-experience-audit`, `api-design-review`, or `competitive-response`, check whether the product has agent-accessible surfaces (MCP server, CLI, machine-readable docs). If agent surface coverage is missing or weak, suggest running `agent-surface-audit` as a follow-up. This is the gateway to the full Agent-First skill category (`mcp-design-review`, `agent-journey-mapping`, `agent-ready-gtm`, `agent-integration-design`, `agent-consumer-experience`).
 
+## Validation Trigger
+
+After running `feature-prioritization`, if any features have low confidence scores (below 0.5), suggest `prototype-driven-validation` or `experiment-design` to validate before committing engineering resources.
+
 ## Signal Freshness Check
 
 Before running any skill, check `context/signals/` for existing signal files. Look at the timestamp in each file's header:

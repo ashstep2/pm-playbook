@@ -16,6 +16,7 @@ skills:
       - research-to-product-pipeline
       - platform-vs-application
       - pricing-and-monetization
+      - product-narrative-strategy
     reads_from:
       - competitive-response
       - vertical-market-assessment
@@ -30,6 +31,7 @@ skills:
     reads_from:
       - customer-discovery
       - user-segmentation
+      - experiment-design
 
   competitive-response:
     category: strategic
@@ -39,6 +41,7 @@ skills:
       - pricing-and-monetization
       - platform-vs-application
       - agent-surface-audit
+      - product-narrative-strategy
     reads_from:
       - ecosystem-health
       - vertical-market-assessment
@@ -72,6 +75,18 @@ skills:
       - user-segmentation
       - ecosystem-health
 
+  product-narrative-strategy:
+    category: strategic
+    feeds_into:
+      - stakeholder-alignment
+      - zero-to-one-product-launch
+      - feature-prioritization
+    reads_from:
+      - product-portfolio-strategy
+      - customer-discovery
+      - measuring-product-market-fit
+      - competitive-response
+
   # ── Planning ───────────────────────────────────────────────
   zero-to-one-product-launch:
     category: planning
@@ -83,6 +98,8 @@ skills:
       - feature-prioritization
       - measuring-product-market-fit
       - writing-prds-for-ai
+      - prototype-driven-validation
+      - product-narrative-strategy
 
   feature-prioritization:
     category: planning
@@ -90,6 +107,7 @@ skills:
       - writing-prds-for-ai
       - zero-to-one-product-launch
       - stakeholder-alignment
+      - prototype-driven-validation
     reads_from:
       - north-star-metrics
       - competitive-response
@@ -112,6 +130,7 @@ skills:
       - feature-prioritization
       - user-onboarding-optimization
       - measuring-product-market-fit
+      - experiment-design
     reads_from:
       - user-segmentation
       - customer-discovery
@@ -124,6 +143,19 @@ skills:
     reads_from:
       - feature-prioritization
       - research-to-product-pipeline
+      - prototype-driven-validation
+
+  experiment-design:
+    category: planning
+    feeds_into:
+      - measuring-product-market-fit
+      - user-onboarding-optimization
+      - north-star-metrics
+    reads_from:
+      - north-star-metrics
+      - feature-prioritization
+      - customer-discovery
+      - prototype-driven-validation
 
   # ── Execution ──────────────────────────────────────────────
   customer-discovery:
@@ -133,6 +165,8 @@ skills:
       - measuring-product-market-fit
       - vertical-market-assessment
       - north-star-metrics
+      - prototype-driven-validation
+      - product-narrative-strategy
     reads_from: []
 
   developer-experience-audit:
@@ -142,6 +176,7 @@ skills:
       - user-onboarding-optimization
       - feature-prioritization
       - agent-surface-audit
+      - product-quality-review
     reads_from:
       - ecosystem-health
       - platform-vs-application
@@ -151,6 +186,7 @@ skills:
     feeds_into:
       - north-star-metrics
       - measuring-product-market-fit
+      - product-quality-review
     reads_from:
       - zero-to-one-product-launch
       - user-segmentation
@@ -163,6 +199,29 @@ skills:
       - zero-to-one-product-launch
       - feature-prioritization
       - research-to-product-pipeline
+      - prototype-driven-validation
+      - product-narrative-strategy
+
+  prototype-driven-validation:
+    category: execution
+    feeds_into:
+      - writing-prds-for-ai
+      - stakeholder-alignment
+      - zero-to-one-product-launch
+      - experiment-design
+      - product-quality-review
+    reads_from:
+      - customer-discovery
+      - feature-prioritization
+
+  iteration-cadence-design:
+    category: execution
+    feeds_into:
+      - prototype-driven-validation
+      - experiment-design
+    reads_from:
+      - stakeholder-alignment
+      - feature-prioritization
 
   # ── Agent-First ──────────────────────────────────────────────
   agent-surface-audit:
@@ -260,3 +319,13 @@ skills:
     reads_from:
       - ecosystem-health
       - competitive-response
+
+  product-quality-review:
+    category: analysis
+    feeds_into:
+      - feature-prioritization
+      - prototype-driven-validation
+    reads_from:
+      - developer-experience-audit
+      - user-onboarding-optimization
+      - customer-discovery

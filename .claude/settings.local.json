@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(echo === SOURCE URL CHECK IN CORE PRINCIPLES ===:*)",
-      "Bash(echo === ATTRIBUTION FORMAT VIOLATIONS ===:*)"
+      "Bash(echo === ATTRIBUTION FORMAT VIOLATIONS ===:*)",
+      "Bash(tail:*)",
+      "Bash(head:*)",
+      "Bash(python3:*)"
     ]
   }
 }

@@ -1,8 +1,8 @@
 # PM Playbooks
 
-**25 reusable PM skills for Claude Code** — repeatable decision-making workflows that produce structured artifacts (scorecards, frameworks, roadmaps) grounded in attributed insights from product leaders.
+**30 reusable PM skills for Claude Code** — repeatable decision-making workflows that produce structured artifacts (scorecards, frameworks, roadmaps) grounded in attributed insights from product leaders.
 
-![Skills](https://img.shields.io/badge/skills-25-blue)
+![Skills](https://img.shields.io/badge/skills-30-blue)
 ![Meta-skills](https://img.shields.io/badge/meta--skills-2-purple)
 ![Collectors](https://img.shields.io/badge/signal_collectors-4-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
@@ -17,7 +17,7 @@
 │  ├── company/        ├── customer-discovery    ├── strategic│
 │  ├── competitive/    ├── feature-prioritization├── planning │
 │  ├── products/       ├── north-star-metrics    └── ...      │
-│  ├── verticals/      ├── ... (25 skills)                    │
+│  ├── verticals/      ├── ... (30 skills)                    │
 │  └── signals/        └── ... (+ company skills)             │
 │       ▲                     │                      │        │
 │       │                     ▼                      │        │
@@ -61,6 +61,7 @@ No configuration required. Skills work out of the box by asking for context inte
 | [research-to-product-pipeline](skills/research-to-product-pipeline/SKILL.md) | Translation framework: research breakthroughs → shipped products |
 | [platform-vs-application](skills/platform-vs-application/SKILL.md) | Build/buy/partner analysis + platform economics + ecosystem design |
 | [vertical-market-assessment](skills/vertical-market-assessment/SKILL.md) | TAM/SAM/SOM + vertical prioritization matrix + entry strategy |
+| [product-narrative-strategy](skills/product-narrative-strategy/SKILL.md) | Product vision doc + strategy narrative + roadmap story + customer context brief |
 
 ### Planning — Deciding HOW to build
 
@@ -71,6 +72,7 @@ No configuration required. Skills work out of the box by asking for context inte
 | [pricing-and-monetization](skills/pricing-and-monetization/SKILL.md) | Pricing model analysis + willingness-to-pay + packaging strategy |
 | [north-star-metrics](skills/north-star-metrics/SKILL.md) | Metric tree + leading/lagging indicators + dashboard design |
 | [writing-prds-for-ai](skills/writing-prds-for-ai/SKILL.md) | PRD template + uncertainty handling + eval criteria for AI outputs |
+| [experiment-design](skills/experiment-design/SKILL.md) | Experiment briefs + statistical plans + growth loop design + results synthesis |
 
 ### Execution — Building and shipping
 
@@ -80,6 +82,8 @@ No configuration required. Skills work out of the box by asking for context inte
 | [developer-experience-audit](skills/developer-experience-audit/SKILL.md) | Friction scorecard + prioritized DX recommendations |
 | [user-onboarding-optimization](skills/user-onboarding-optimization/SKILL.md) | Onboarding flow audit + activation metrics + improvement roadmap |
 | [stakeholder-alignment](skills/stakeholder-alignment/SKILL.md) | RACI matrix + communication plan + research-product interface |
+| [prototype-driven-validation](skills/prototype-driven-validation/SKILL.md) | Prototype brief + variation matrix + customer test plan + build/kill decision |
+| [iteration-cadence-design](skills/iteration-cadence-design/SKILL.md) | Cadence architecture + weekly PM calendar + ritual design + adaptation triggers |
 
 ### Agent-First — Building for agent-mediated distribution
 
@@ -100,6 +104,7 @@ No configuration required. Skills work out of the box by asking for context inte
 | [ecosystem-health](skills/ecosystem-health/SKILL.md) | Ecosystem scorecard + benchmark comparison + growth playbook |
 | [api-design-review](skills/api-design-review/SKILL.md) | Per-endpoint assessment + standards compliance + agent readiness |
 | [partnership-evaluation](skills/partnership-evaluation/SKILL.md) | Partner scorecards + deal structures + comparative assessment |
+| [product-quality-review](skills/product-quality-review/SKILL.md) | Quality scorecard + taste gap analysis + competitive craft comparison + quality roadmap |
 
 ## Skill Dependency Graph
 
@@ -114,6 +119,7 @@ graph LR
         RTP[research-to-product-pipeline]
         PVA[platform-vs-application]
         VMA[vertical-market-assessment]
+        PNS[product-narrative-strategy]
     end
 
     subgraph Planning
@@ -122,6 +128,7 @@ graph LR
         PM[pricing-and-monetization]
         NSM[north-star-metrics]
         PRD[writing-prds-for-ai]
+        EXP[experiment-design]
     end
 
     subgraph Execution
@@ -129,6 +136,8 @@ graph LR
         DXA[developer-experience-audit]
         UOO[user-onboarding-optimization]
         SA[stakeholder-alignment]
+        PDV[prototype-driven-validation]
+        ICD[iteration-cadence-design]
     end
 
     subgraph Agent-First
@@ -145,6 +154,7 @@ graph LR
         EH[ecosystem-health]
         ADR[api-design-review]
         PE[partnership-evaluation]
+        PQR[product-quality-review]
     end
 
     CD --> US --> PMF --> ZTO
@@ -177,6 +187,25 @@ graph LR
     AJM --> ACE
     AGTM --> ZTO
     ACE --> UOO
+    CD --> PDV
+    FP --> PDV
+    PDV --> PRD
+    PDV --> SA
+    PDV --> ZTO
+    PDV --> EXP
+    PNS --> SA
+    PNS --> ZTO
+    PNS --> FP
+    CD --> PNS
+    CR --> PNS
+    NSM --> EXP
+    EXP --> PMF
+    EXP --> UOO
+    ICD --> PDV
+    ICD --> EXP
+    DXA --> PQR
+    PQR --> FP
+    PQR --> PDV
 ```
 
 ## Installation
@@ -198,7 +227,7 @@ git submodule add https://github.com/ashstep2/pm-playbooks.git
 bash pm-playbooks/scaffold/install.sh
 ```
 
-This symlinks all 25 skills into `.claude/skills/` and generates a `CLAUDE.md` for your project.
+This symlinks all 30 skills into `.claude/skills/` and generates a `CLAUDE.md` for your project.
 
 ### Path C: Full Company Setup (30 minutes)
 

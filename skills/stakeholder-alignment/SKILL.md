@@ -99,7 +99,7 @@ Produce a **Communication Plan** specifying how information flows between stakeh
 - Read `context/products/` to understand existing communication norms and tooling
 - For each stakeholder quadrant from Step 1, define:
   - **Cadence:** How often they receive updates (daily, weekly, biweekly, monthly, ad hoc)
-  - **Format:** Standup, written brief, dashboard, 1:1, all-hands, Slack channel, email digest
+  - **Format:** Standup, written brief, dashboard, 1:1, all-hands, Slack channel, email digest, prototype walkthrough (for contentious decisions or early-stage concepts — see `prototype-driven-validation`)
   - **Content:** What information they need (progress, blockers, decisions needed, metrics, context)
   - **Owner:** Who is responsible for preparing and delivering each communication
 - Design escalation paths: When a decision is blocked, who escalates to whom, within what timeframe?
@@ -116,6 +116,7 @@ Produce a **Decision-Making Framework** that specifies how the team makes differ
   - **Tier 1 — Reversible and low-stakes:** Made by the individual closest to the work, communicated async. Examples: copy changes, minor UI tweaks, internal tooling choices
   - **Tier 2 — Significant but bounded:** Made by the product lead with input from affected stakeholders (C in RACI), decided within 48 hours. Examples: feature scope, sprint priorities, API parameter naming
   - **Tier 3 — Irreversible or high-stakes:** Made with full stakeholder input, explicit decision meeting, written rationale. Examples: pricing model, public API contract, launch date, deprecation
+- For contentious Tier 2 and Tier 3 decisions where stakeholders cannot align on a direction, consider a **prototype-informed decision:** build 2-3 prototype variations, test with users, and let data resolve the debate. As Charlie Sutton (Atlassian CDO) says, "A prototype saves a thousand meetings." See `prototype-driven-validation` for the full workflow.
 - For each tier, specify: who decides, how input is gathered, what the time limit is, and what "disagree and commit" looks like
 - Read `context/competitive/` to identify decisions that are time-sensitive due to competitive pressure — these may need compressed decision timelines
 - Define the "decision log" format: every Tier 2 and Tier 3 decision is documented with date, decision-maker, options considered, rationale, and dissenting views

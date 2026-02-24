@@ -74,8 +74,10 @@ Before any tactical planning, produce a one-page launch brief that answers:
 - **Who is the customer?** Name the specific beachhead segment. Not "developers" — which developers, building what, blocked by what?
 - **What can they do now that they could not do before?** One sentence. This is the transformation, not the feature list.
 - **Why should they care today?** What is the urgency or catalyst? A pain point that just got worse, a new capability that just became possible, a competitor gap.
+- **Prototype validation status:** Has the core concept been validated with real users? If `prototype-driven-validation` was run, summarize: which variations were tested, what was validated, and how it shaped the launch approach. If no prototype was run, state why (e.g., high confidence from prior art, time constraints) and flag it as a risk.
 - **What does success look like in 30 days?** A single leading indicator.
 - **What is the one-line positioning statement?** Use April Dunford's format: "For [target customer] who [need], [product] is a [category] that [key differentiator]."
+- **Positioning narrative:** For deeper positioning work, reference `product-narrative-strategy` to develop the full vision-to-roadmap story.
 
 **Output:** A launch brief document (1-2 pages) saved as `applied/launch-brief-{product}.md`.
 
@@ -238,7 +240,7 @@ Ask these before beginning the launch plan to calibrate the approach:
 
 2. **What is the single action that proves value?** If a user does one thing with your product, what is it? If you cannot answer this, scope the product down until you can.
 
-3. **Does the product work end-to-end today?** A launch plan for something that does not yet work is a distraction. If the answer is no, finish building, then return.
+3. **Does the product work end-to-end today?** A launch plan for something that does not yet work is a distraction. If the answer is no, finish building, then return. If the concept has not been validated with users, consider running `prototype-driven-validation` before committing to a launch plan.
 
 4. **How will users find you without paid acquisition?** If the only path to users is paid ads, the value proposition may not be strong enough to generate organic pull. Reconsider positioning.
 
