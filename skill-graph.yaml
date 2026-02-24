@@ -3,7 +3,7 @@
 # Used by CLAUDE.md to suggest skill chaining after a run completes.
 #
 # Fields:
-#   category:   strategic | planning | execution | analysis
+#   category:   strategic | planning | execution | agent-first | analysis
 #   feeds_into: skills that logically follow this one
 #   reads_from: skills whose output this one benefits from
 
@@ -38,6 +38,7 @@ skills:
       - product-portfolio-strategy
       - pricing-and-monetization
       - platform-vs-application
+      - agent-surface-audit
     reads_from:
       - ecosystem-health
       - vertical-market-assessment
@@ -140,6 +141,7 @@ skills:
       - api-design-review
       - user-onboarding-optimization
       - feature-prioritization
+      - agent-surface-audit
     reads_from:
       - ecosystem-health
       - platform-vs-application
@@ -161,6 +163,65 @@ skills:
       - zero-to-one-product-launch
       - feature-prioritization
       - research-to-product-pipeline
+
+  # ── Agent-First ──────────────────────────────────────────────
+  agent-surface-audit:
+    category: agent-first
+    feeds_into:
+      - mcp-design-review
+      - agent-journey-mapping
+      - agent-ready-gtm
+    reads_from:
+      - developer-experience-audit
+      - api-design-review
+      - competitive-response
+
+  mcp-design-review:
+    category: agent-first
+    feeds_into:
+      - agent-journey-mapping
+      - agent-integration-design
+    reads_from:
+      - agent-surface-audit
+      - api-design-review
+
+  agent-journey-mapping:
+    category: agent-first
+    feeds_into:
+      - agent-integration-design
+      - agent-consumer-experience
+      - user-onboarding-optimization
+    reads_from:
+      - agent-surface-audit
+      - mcp-design-review
+
+  agent-ready-gtm:
+    category: agent-first
+    feeds_into:
+      - zero-to-one-product-launch
+      - pricing-and-monetization
+    reads_from:
+      - agent-surface-audit
+      - competitive-response
+
+  agent-integration-design:
+    category: agent-first
+    feeds_into:
+      - agent-journey-mapping
+      - ecosystem-health
+    reads_from:
+      - agent-surface-audit
+      - mcp-design-review
+      - api-design-review
+
+  agent-consumer-experience:
+    category: agent-first
+    feeds_into:
+      - user-onboarding-optimization
+      - user-segmentation
+    reads_from:
+      - agent-journey-mapping
+      - customer-discovery
 
   # ── Analysis ───────────────────────────────────────────────
   user-segmentation:
@@ -186,6 +247,8 @@ skills:
     category: analysis
     feeds_into:
       - developer-experience-audit
+      - mcp-design-review
+      - agent-surface-audit
     reads_from:
       - developer-experience-audit
 

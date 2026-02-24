@@ -107,11 +107,29 @@ Evaluate each endpoint on the following dimensions using a 1-5 scale:
 
 **Artifact:** Developer Ergonomics Assessment rating time-to-first-call, documentation completeness, SDK quality, and async operation patterns
 
-### Step 7: Produce Prioritized Recommendations
+### Step 7: Assess Agent Interface Readiness
 
-- Compile all findings from Steps 2-6
+Evaluate the API's readiness for consumption by AI agents (Claude Code, Cursor, LangChain, custom orchestrators):
+
+- **CLI availability**: Does a CLI exist that wraps this API? Does it support `--json` output?
+- **MCP server**: Is there an MCP server that exposes these endpoints as tools? Are tool descriptions clear enough for an agent to select the right tool?
+- **OpenAPI/machine-readable spec**: Is the API described in a machine-readable format that agents can introspect?
+- **Structured errors**: Can an agent parse error responses programmatically and decide whether to retry, fix the request, or escalate?
+- **Idempotency**: Are mutating endpoints idempotent? Agents retry — non-idempotent endpoints cause data corruption in agent workflows.
+- **JSON output consistency**: Do all endpoints return the same response envelope? Agents cannot handle inconsistent shapes.
+
+Rate overall agent readiness: **Agent-native** (MCP + CLI + consistent JSON) / **Agent-compatible** (API works but requires integration effort) / **Agent-hostile** (GUI-only, inconsistent output, no machine-readable spec).
+
+If agent readiness is low, recommend running the `agent-surface-audit` and `mcp-design-review` skills for deeper analysis.
+
+**Artifact:** Agent Interface Readiness Assessment (evaluation per dimension + overall rating)
+
+### Step 8: Produce Prioritized Recommendations
+
+- Compile all findings from Steps 2-7
 - Categorize each finding as: **Breaking** (requires versioning to fix), **Non-breaking** (can ship immediately), or **Convention** (style preference, adopt going forward)
 - Prioritize by: developer impact (how many developers hit this), severity (confusion vs. blocker), fix cost (minutes vs. weeks)
+- Include agent-readiness findings: MCP/CLI gaps are now first-class priority items, not future nice-to-haves
 - Produce a ranked recommendation list with the top 5 starred as "fix before public launch" items
 
 **Artifact:** Prioritized Recommendations Table with columns: Priority Rank, Finding, Category (Breaking/Non-breaking/Convention), Developer Impact (High/Med/Low), Fix Cost (High/Med/Low), Recommendation
@@ -122,7 +140,7 @@ Evaluate each endpoint on the following dimensions using a 1-5 scale:
 
 2. **What stage is the API in?** Pre-launch APIs can absorb breaking changes freely. Post-launch APIs require versioning for any breaking fix. The review should calibrate urgency accordingly.
 
-3. **What are the primary consumer personas?** An API consumed by frontend engineers has different ergonomic needs than one consumed by data scientists or embedded systems developers.
+3. **What are the primary consumer personas?** An API consumed by frontend engineers has different ergonomic needs than one consumed by data scientists or embedded systems developers. Increasingly, AI agents are a primary consumer persona — they need consistent JSON, machine-readable schemas, and structured errors.
 
 4. **Does the API have an existing style guide or design spec?** If yes, the review audits compliance. If no, the review produces a recommended style guide as a bonus artifact.
 

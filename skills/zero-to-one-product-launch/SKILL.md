@@ -103,6 +103,14 @@ Identify 3-5 launch channels and rank them by expected signal quality (not reach
 - Provide a free tier or generous trial credits so the first experience has zero friction.
 - Consider a "build in public" pre-launch to generate anticipation among early adopters.
 
+**Agent distribution channel (all products with APIs):**
+- Ship an MCP server with your launch. Every Claude Code user, Cursor session, and autonomous workflow becomes a potential distribution channel. If your competitor launches with MCP and you do not, agents will discover them first.
+- Ship a CLI with `--json` output. Agents interact with CLIs natively — stdin/stdout is the universal agent interface.
+- Ensure documentation is available in markdown (not just rendered HTML). Agents consume markdown programmatically.
+- Publish an OpenAPI spec or machine-readable tool catalog so agents can introspect your product.
+- List your MCP server on registries (mcp.run, Smithery) — this is the agent equivalent of getting listed on Product Hunt.
+- Run the `agent-surface-audit` skill to validate agent accessibility before launch.
+
 **Output:** A channel strategy table with timing (pre-launch, launch day, post-launch week 1).
 
 ### Step 3: Define Success Metrics with Thresholds
@@ -239,6 +247,8 @@ Ask these before beginning the launch plan to calibrate the approach:
 6. **What would make you pull the product from the market after launch?** If you do not have a clear answer, write the rollback plan now.
 
 7. **Is this a developer product?** If yes, the launch plan must lead with documentation, working code examples, and a zero-friction first experience. Marketing copy is secondary to a great `README.md`.
+
+8. **Does the product have an MCP server and CLI?** If not, your product is invisible to the fastest-growing distribution channel in software: AI agents. Consider the agent distribution channel checklist in Step 2 and run the `agent-surface-audit` skill before launch.
 
 ## Common Mistakes
 

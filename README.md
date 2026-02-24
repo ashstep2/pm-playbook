@@ -1,8 +1,8 @@
 # PM Playbooks
 
-**19 reusable PM skills for Claude Code** — repeatable decision-making workflows that produce structured artifacts (scorecards, frameworks, roadmaps) grounded in attributed insights from product leaders.
+**25 reusable PM skills for Claude Code** — repeatable decision-making workflows that produce structured artifacts (scorecards, frameworks, roadmaps) grounded in attributed insights from product leaders.
 
-![Skills](https://img.shields.io/badge/skills-19-blue)
+![Skills](https://img.shields.io/badge/skills-25-blue)
 ![Meta-skills](https://img.shields.io/badge/meta--skills-2-purple)
 ![Collectors](https://img.shields.io/badge/signal_collectors-4-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
@@ -17,7 +17,7 @@
 │  ├── company/        ├── customer-discovery    ├── strategic│
 │  ├── competitive/    ├── feature-prioritization├── planning │
 │  ├── products/       ├── north-star-metrics    └── ...      │
-│  ├── verticals/      ├── ... (19 skills)                    │
+│  ├── verticals/      ├── ... (25 skills)                    │
 │  └── signals/        └── ... (+ company skills)             │
 │       ▲                     │                      │        │
 │       │                     ▼                      │        │
@@ -81,13 +81,24 @@ No configuration required. Skills work out of the box by asking for context inte
 | [user-onboarding-optimization](skills/user-onboarding-optimization/SKILL.md) | Onboarding flow audit + activation metrics + improvement roadmap |
 | [stakeholder-alignment](skills/stakeholder-alignment/SKILL.md) | RACI matrix + communication plan + research-product interface |
 
+### Agent-First — Building for agent-mediated distribution
+
+| Skill | What It Produces | Persona |
+|---|---|---|
+| [agent-surface-audit](skills/agent-surface-audit/SKILL.md) | Agent accessibility scorecard + surface inventory + remediation roadmap | Developer / All |
+| [mcp-design-review](skills/mcp-design-review/SKILL.md) | Per-tool scorecard + security audit + description quality assessment | Developer |
+| [agent-journey-mapping](skills/agent-journey-mapping/SKILL.md) | Agent journey maps + I/O contracts + failure mode analysis | Developer / Ops |
+| [agent-ready-gtm](skills/agent-ready-gtm/SKILL.md) | Agent buyer journey + trust center API + pricing surface design | Enterprise Buyer |
+| [agent-integration-design](skills/agent-integration-design/SKILL.md) | I/O specs + webhook design + orchestration compatibility matrix | Ops / Workflow |
+| [agent-consumer-experience](skills/agent-consumer-experience/SKILL.md) | Agent interaction map + consent framework + preference API | End User |
+
 ### Analysis — Measuring and learning
 
 | Skill | What It Produces |
 |---|---|
 | [user-segmentation](skills/user-segmentation/SKILL.md) | Segment profiles + prioritization matrix + cross-segment insights |
 | [ecosystem-health](skills/ecosystem-health/SKILL.md) | Ecosystem scorecard + benchmark comparison + growth playbook |
-| [api-design-review](skills/api-design-review/SKILL.md) | Per-endpoint assessment + standards compliance + recommendations |
+| [api-design-review](skills/api-design-review/SKILL.md) | Per-endpoint assessment + standards compliance + agent readiness |
 | [partnership-evaluation](skills/partnership-evaluation/SKILL.md) | Partner scorecards + deal structures + comparative assessment |
 
 ## Skill Dependency Graph
@@ -120,6 +131,15 @@ graph LR
         SA[stakeholder-alignment]
     end
 
+    subgraph Agent-First
+        ASA[agent-surface-audit]
+        MDR[mcp-design-review]
+        AJM[agent-journey-mapping]
+        AGTM[agent-ready-gtm]
+        AID[agent-integration-design]
+        ACE[agent-consumer-experience]
+    end
+
     subgraph Analysis
         US[user-segmentation]
         EH[ecosystem-health]
@@ -130,6 +150,7 @@ graph LR
     CD --> US --> PMF --> ZTO
     CR --> FP
     CR --> PPS
+    CR --> ASA
     EH --> CR
     EH --> PE
     EH --> DXA
@@ -142,8 +163,20 @@ graph LR
     ZTO --> SA
     VMA --> CD
     DXA --> ADR
+    DXA --> ASA
+    ADR --> MDR
+    ADR --> ASA
     PE --> PPS
     RTP --> PRD
+    ASA --> MDR
+    ASA --> AJM
+    ASA --> AGTM
+    MDR --> AJM
+    MDR --> AID
+    AJM --> AID
+    AJM --> ACE
+    AGTM --> ZTO
+    ACE --> UOO
 ```
 
 ## Installation
@@ -165,7 +198,7 @@ git submodule add https://github.com/ashstep2/pm-playbooks.git
 bash pm-playbooks/scaffold/install.sh
 ```
 
-This symlinks all 19 skills into `.claude/skills/` and generates a `CLAUDE.md` for your project.
+This symlinks all 25 skills into `.claude/skills/` and generates a `CLAUDE.md` for your project.
 
 ### Path C: Full Company Setup (30 minutes)
 

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo === SOURCE URL CHECK IN CORE PRINCIPLES ===:*)",
+      "Bash(echo === ATTRIBUTION FORMAT VIOLATIONS ===:*)"
+    ]
+  }
+}

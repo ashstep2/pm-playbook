@@ -53,6 +53,7 @@ Walk through the entire developer journey from first discovery to production dep
 
 | Stage | What to Document |
 |-------|-----------------|
+| **Agent Discovery** | Can an AI agent (Claude Code, Cursor, etc.) discover and use this product programmatically? Is there an MCP server, CLI with JSON output, or OpenAPI spec? Is the product listed on MCP registries? If agents cannot find it, the fastest-growing developer segment is locked out. |
 | **Discovery** | How does a developer first learn this product exists? Google search results, landing page clarity, "what is this?" comprehension time |
 | **Evaluation** | Can the developer understand what this does and whether it solves their problem within 60 seconds of landing? Is there a live demo, interactive playground, or video? |
 | **Signup / Access** | How many steps from "I want to try this" to "I have an API key"? Are there unnecessary gates (required credit card, sales call, approval queue)? |
@@ -135,10 +136,11 @@ Using findings from Steps 1-4, produce a composite friction scorecard. Score eac
 |----------|-------------|--------|---------------|-------------|
 | Discovery and evaluation | | 10% | | |
 | Signup and access | | 10% | | |
-| Time-to-hello-world | | 25% | | |
-| Documentation quality | | 20% | | |
+| Time-to-hello-world | | 20% | | |
+| Documentation quality | | 15% | | |
 | Error experience | | 15% | | |
 | SDK and integration support | | 10% | | |
+| Agent accessibility (CLI, MCP, JSON output, machine-readable docs) | | 10% | | |
 | Production readiness | | 10% | | |
 | **Overall DX Score** | | **100%** | | |
 
@@ -203,6 +205,8 @@ Assemble all artifacts from Steps 1-6 into a single executive-ready document:
 6. **Is your getting-started guide optimized for the 80th-percentile developer or the 20th?** Most getting-started guides are written by experts for experts. The developers who need the guide most are the ones who know the least about your product.
 
 7. **What is the last DX improvement you shipped, and when?** If you cannot remember, DX has become an afterthought. Developer experience degrades by default — it requires continuous investment.
+
+8. **Can an AI agent install, authenticate, and make a successful API call to your product without human help?** If not, run the `agent-surface-audit` skill. Agent-mediated development is the fastest-growing developer workflow — if agents cannot use your product, you are invisible to a rapidly growing segment.
 
 ## Common Mistakes
 

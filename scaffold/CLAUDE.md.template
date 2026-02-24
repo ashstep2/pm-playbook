@@ -23,6 +23,10 @@ When a skill is invoked (by name or by describing a PM question):
 
 After completing any skill, check `pm-playbooks/skill-graph.yaml` for the `feeds_into` list of the skill you just ran. Briefly mention which skills would logically follow and why — for example, "Customer Discovery typically feeds into User Segmentation and Measuring PMF." Ask the user if they want to run one next. Do not force chaining — it is always the user's choice.
 
+## Agent-First Trigger
+
+After running `developer-experience-audit`, `api-design-review`, or `competitive-response`, check whether the product has agent-accessible surfaces (MCP server, CLI, machine-readable docs). If agent surface coverage is missing or weak, suggest running `agent-surface-audit` as a follow-up. This is the gateway to the full Agent-First skill category (`mcp-design-review`, `agent-journey-mapping`, `agent-ready-gtm`, `agent-integration-design`, `agent-consumer-experience`).
+
 ## Signal Freshness Check
 
 Before running any skill, check `context/signals/` for existing signal files. Look at the timestamp in each file's header:

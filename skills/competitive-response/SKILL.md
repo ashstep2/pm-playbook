@@ -68,12 +68,13 @@ Rate each competitor across four dimensions (1-5 scale each):
 | **Momentum** | Growth rate, funding, hiring velocity, and market buzz |
 | **Capability** | Technical depth, team quality, and resource advantage |
 | **Trajectory** | Whether their roadmap is converging toward or diverging from your space |
+| **Agent Surface** | Does the competitor have an MCP server, CLI, or agent-accessible interface? If yes, they are capturing agent-mediated distribution that you are not. A competitor launching an MCP server is a competitive event — agents will discover and use their product in autonomous workflows. Score 1 (no agent surface) to 5 (full MCP + CLI + agent-native docs). |
 
-Compute a **Threat Score** (sum of four dimensions, max 20) and classify:
-- **Critical (16-20)**: Existential threat demanding immediate strategic response
-- **Serious (11-15)**: Material threat requiring a defined response within one quarter
-- **Monitor (6-10)**: Emerging threat worth tracking but not yet requiring action
-- **Noise (1-5)**: Not a real competitive threat; do not allocate resources
+Compute a **Threat Score** (sum of five dimensions, max 25) and classify:
+- **Critical (20-25)**: Existential threat demanding immediate strategic response
+- **Serious (14-19)**: Material threat requiring a defined response within one quarter
+- **Monitor (7-13)**: Emerging threat worth tracking but not yet requiring action
+- **Noise (1-6)**: Not a real competitive threat; do not allocate resources
 
 - **Artifact produced**: Threat Classification Matrix (table with scores, classifications, and rationale for each competitor)
 
@@ -115,6 +116,7 @@ Beyond the known landscape, brainstorm 2-4 plausible surprise entrant scenarios:
 - Which open-source project could erode your technical moat?
 - Which adjacent startup could pivot into your space after a funding round?
 - Which customer could build the product internally?
+- Which company could launch an MCP server that makes your product's value available through their interface? (Agent-mediated distribution shifts — a tool that wraps your functionality into an MCP server captures your value chain without being a traditional competitor.)
 
 For each scenario, assign a probability (low / medium / high), the expected timeline, and a tripwire signal (an observable event that would indicate the scenario is becoming real). Define a pre-committed response for each tripwire.
 
