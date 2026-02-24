@@ -31,7 +31,7 @@
 ## Quick Start
 
 ```bash
-git clone https://github.com/ashstep2/pm-playbooks.git
+git clone https://github.com/ashstep2/pm-playbook.git
 cd pm-playbooks
 # Open in Claude Code and invoke any skill by name
 ```
@@ -215,7 +215,7 @@ graph LR
 ### Path A: Zero-Config (30 seconds)
 
 ```bash
-git clone https://github.com/ashstep2/pm-playbooks.git
+git clone https://github.com/ashstep2/pm-playbook.git
 # Open in Claude Code → invoke any skill by name
 ```
 
@@ -225,7 +225,7 @@ Skills ask for context interactively. No setup required.
 
 ```bash
 # From your project root
-git submodule add https://github.com/ashstep2/pm-playbooks.git
+git submodule add https://github.com/ashstep2/pm-playbook.git
 bash pm-playbooks/scaffold/install.sh
 ```
 
@@ -234,7 +234,7 @@ This symlinks all 30 skills into `.claude/skills/` and generates a `CLAUDE.md` f
 ### Path C: Full Company Setup (30 minutes)
 
 ```bash
-git submodule add https://github.com/ashstep2/pm-playbooks.git
+git submodule add https://github.com/ashstep2/pm-playbook.git
 bash pm-playbooks/scaffold/install.sh
 
 # Fill in company context

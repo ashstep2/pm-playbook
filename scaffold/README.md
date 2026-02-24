@@ -7,7 +7,7 @@ Use this template to create a company-specific repo that pairs with pm-playbooks
 Clone pm-playbooks directly and start using skills. No company context, no submodule — skills ask for information interactively.
 
 ```bash
-git clone https://github.com/ashstep2/pm-playbooks.git
+git clone https://github.com/ashstep2/pm-playbook.git
 # Open in Claude Code → invoke any skill by name
 ```
 
@@ -18,7 +18,7 @@ Add pm-playbooks as a submodule in your project and run the install script to sy
 ```bash
 # From your project root
 git init  # skip if already a git repo
-git submodule add https://github.com/ashstep2/pm-playbooks.git
+git submodule add https://github.com/ashstep2/pm-playbook.git
 
 # Install skills + generate CLAUDE.md
 bash pm-playbooks/scaffold/install.sh
@@ -36,7 +36,7 @@ For the richest, most grounded outputs — add company context and signal collec
 
 ```bash
 # 1. Submodule + install
-git submodule add https://github.com/ashstep2/pm-playbooks.git
+git submodule add https://github.com/ashstep2/pm-playbook.git
 bash pm-playbooks/scaffold/install.sh
 
 # 2. Create context directories
