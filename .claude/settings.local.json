@@ -7,7 +7,16 @@
       "Bash(head:*)",
       "Bash(python3:*)",
       "Bash(ls:*)",
-      "Bash(gh repo:*)"
+      "Bash(gh repo:*)",
+      "Bash(do:*)",
+      "Bash(chmod +x:*)",
+      "Bash(./harness/build-registry.sh:*)",
+      "Bash(bash:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsx:*)",
+      "Bash(./harness/skill-runner.sh list:*)",
+      "Bash(./harness/skill-runner.sh:*)",
+      "Bash(./harness/skill-runner.sh run:*)"
     ]
   }
 }

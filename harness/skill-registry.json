@@ -1,0 +1,635 @@
+{
+  "skills": {
+    "agent-consumer-experience": {
+      "name": "agent-consumer-experience",
+      "description": "Help users design products for end-user personal agents — mapping how consumer AI assistants interact with your product on behalf of humans — producing agent interaction models, consent frameworks, preference APIs, and agent-mediated UX patterns.",
+      "version": "1.0.0",
+      "category": "agent-first",
+      "skill_path": "skills/agent-consumer-experience/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*agent-consumer-experience*.md",
+      "expected_artifacts": ["Agent Interaction Map","Consent and Delegation Framework with tier definitions and configuration specification","Preference API Specification","Agent-Mediated UX Flow Diagrams","Agent Consumer Metrics Dashboard Specification","Agent Consumer Experience Design"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Agent Interaction Map","Consent and Delegation Framework with tier definitions and configuration specification","Preference API Specification","Agent-Mediated UX Flow Diagrams","Agent Consumer Metrics Dashboard Specification","Agent Consumer Experience Design"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": ["user-onboarding-optimization","user-segmentation"],
+      "reads_from": ["agent-journey-mapping","customer-discovery"]
+    }
+,
+    "agent-integration-design": {
+      "name": "agent-integration-design",
+      "description": "Help users design their product's integration surface for agent-driven workflows — producing I/O specifications, webhook designs, event stream architecture, and orchestration compatibility assessment.",
+      "version": "1.0.0",
+      "category": "agent-first",
+      "skill_path": "skills/agent-integration-design/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*agent-integration-design*.md",
+      "expected_artifacts": ["Integration Touchpoint Inventory","I/O Contract Registry","Webhook Specification","Orchestration Compatibility Matrix","Event Stream Architecture Specification","Integration Improvement Roadmap"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Integration Touchpoint Inventory","I/O Contract Registry","Webhook Specification","Orchestration Compatibility Matrix","Event Stream Architecture Specification","Integration Improvement Roadmap"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": ["agent-journey-mapping","ecosystem-health"],
+      "reads_from": ["agent-surface-audit","mcp-design-review","api-design-review"]
+    }
+,
+    "agent-journey-mapping": {
+      "name": "agent-journey-mapping",
+      "description": "Help users design agent journeys — mapping how AI agents discover, authenticate, use, and recover from errors with a product — producing journey maps, I/O contracts, failure mode analysis, and agent experience optimization roadmap.",
+      "version": "1.0.0",
+      "category": "agent-first",
+      "skill_path": "skills/agent-journey-mapping/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*agent-journey-mapping*.md",
+      "expected_artifacts": ["Agent Persona Profiles","Agent Journey Map","I/O Contract Registry","Failure Mode Registry","Agent Journey Metrics Dashboard Specification","Agent Experience Optimization Roadmap"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Agent Persona Profiles","Agent Journey Map","I/O Contract Registry","Failure Mode Registry","Agent Journey Metrics Dashboard Specification","Agent Experience Optimization Roadmap"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": ["agent-integration-design","agent-consumer-experience","user-onboarding-optimization"],
+      "reads_from": ["agent-surface-audit","mcp-design-review"]
+    }
+,
+    "agent-ready-gtm": {
+      "name": "agent-ready-gtm",
+      "description": "Help users design go-to-market strategies for agent-mediated buying — producing an agent buyer journey map, machine-readable trust center, pricing API design, and agent-ready GTM playbook.",
+      "version": "1.0.0",
+      "category": "agent-first",
+      "skill_path": "skills/agent-ready-gtm/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*agent-ready-gtm*.md",
+      "expected_artifacts": ["Agent Buyer Journey Map with readiness assessment","Trust Center API Specification","Pricing API Specification with endpoint designs, response schemas, and example responses","Structured Proof Points Registry","Agent Evaluation Kit Specification","Agent-Ready GTM Playbook"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Agent Buyer Journey Map with readiness assessment","Trust Center API Specification","Pricing API Specification with endpoint designs, response schemas, and example responses","Structured Proof Points Registry","Agent Evaluation Kit Specification","Agent-Ready GTM Playbook"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": ["zero-to-one-product-launch","pricing-and-monetization"],
+      "reads_from": ["agent-surface-audit","competitive-response"]
+    }
+,
+    "agent-surface-audit": {
+      "name": "agent-surface-audit",
+      "description": "Help users audit whether their product is discoverable and usable by AI agents — producing an agent accessibility scorecard, surface area inventory, machine-readability assessment, and prioritized remediation roadmap.",
+      "version": "1.0.0",
+      "category": "agent-first",
+      "skill_path": "skills/agent-surface-audit/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*agent-surface-audit*.md",
+      "expected_artifacts": ["Agent Surface Inventory","Agent Discoverability Report","Machine-Readability Scorecard","Agent Auth and Security Assessment","Agent Accessibility Scorecard with overall grade","Agent Surface Remediation Roadmap","Complete Agent Surface Audit Report"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Agent Surface Inventory","Agent Discoverability Report","Machine-Readability Scorecard","Agent Auth and Security Assessment","Agent Accessibility Scorecard with overall grade","Agent Surface Remediation Roadmap","Complete Agent Surface Audit Report"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["mcp-design-review","agent-journey-mapping","agent-ready-gtm"],
+      "reads_from": ["developer-experience-audit","api-design-review","competitive-response"]
+    }
+,
+    "api-design-review": {
+      "name": "api-design-review",
+      "description": "Help users review an API's design quality by assessing endpoints against REST conventions, consistency standards, and developer ergonomics — producing a per-endpoint scorecard, naming audit, error handling review, and prioritized recommendations.",
+      "version": "1.0.0",
+      "category": "analysis",
+      "skill_path": "skills/api-design-review/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*api-design-review*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 8
+      },
+      "feeds_into": ["developer-experience-audit","mcp-design-review","agent-surface-audit"],
+      "reads_from": ["developer-experience-audit"]
+    }
+,
+    "competitive-response": {
+      "name": "competitive-response",
+      "description": "Help users analyze competitive threats, classify their severity, design response strategies, and identify sustainable moats.",
+      "version": "1.0.0",
+      "category": "strategic",
+      "skill_path": "skills/competitive-response/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*competitive-response*.md",
+      "expected_artifacts": ["Competitive Landscape Map","Threat Classification Matrix","Moat Audit","Response Strategy Table","Surprise Entrant Scenarios","Monitoring Cadence Plan","Competitive Response Playbook"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Competitive Landscape Map","Threat Classification Matrix","Moat Audit","Response Strategy Table","Surprise Entrant Scenarios","Monitoring Cadence Plan","Competitive Response Playbook"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["feature-prioritization","product-portfolio-strategy","pricing-and-monetization","platform-vs-application","agent-surface-audit","product-narrative-strategy"],
+      "reads_from": ["ecosystem-health","vertical-market-assessment"]
+    }
+,
+    "customer-discovery": {
+      "name": "customer-discovery",
+      "description": "Help users plan and execute customer discovery — producing interview guides, recruitment strategies, synthesis frameworks, and discovery reports with validated/invalidated hypotheses.",
+      "version": "1.0.0",
+      "category": "execution",
+      "skill_path": "skills/customer-discovery/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*customer-discovery*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["user-segmentation","measuring-product-market-fit","vertical-market-assessment","north-star-metrics","prototype-driven-validation","product-narrative-strategy","experiment-design","product-quality-review"],
+      "reads_from": []
+    }
+,
+    "developer-experience-audit": {
+      "name": "developer-experience-audit",
+      "description": "Help users audit the developer experience of an API or developer product — producing a friction scorecard, time-to-hello-world analysis, documentation quality assessment, and prioritized DX improvement roadmap.",
+      "version": "1.0.0",
+      "category": "execution",
+      "skill_path": "skills/developer-experience-audit/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*developer-experience-audit*.md",
+      "expected_artifacts": ["Developer Journey Map","Time-to-Hello-World Report","Documentation Quality Scorecard","Error Experience Audit","Friction Scorecard","DX Improvement Roadmap","Complete DX Audit Report"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Developer Journey Map","Time-to-Hello-World Report","Documentation Quality Scorecard","Error Experience Audit","Friction Scorecard","DX Improvement Roadmap","Complete DX Audit Report"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["api-design-review","user-onboarding-optimization","feature-prioritization","agent-surface-audit","product-quality-review"],
+      "reads_from": ["ecosystem-health","platform-vs-application"]
+    }
+,
+    "ecosystem-health": {
+      "name": "ecosystem-health",
+      "description": "Help users assess their platform ecosystem's health by scoring community engagement, developer adoption velocity, third-party integrations, and identifying growth levers.",
+      "version": "1.0.0",
+      "category": "analysis",
+      "skill_path": "skills/ecosystem-health/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*ecosystem-health*.md",
+      "expected_artifacts": ["Ecosystem Boundary Map","Community Engagement Scorecard","Developer Adoption Dashboard","Integration Health Matrix","Contributor Health Report","Peer Benchmark Comparison","Ecosystem Growth Playbook","Ecosystem Health Report"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Ecosystem Boundary Map","Community Engagement Scorecard","Developer Adoption Dashboard","Integration Health Matrix","Contributor Health Report","Peer Benchmark Comparison","Ecosystem Growth Playbook","Ecosystem Health Report"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 8
+      },
+      "feeds_into": ["competitive-response","partnership-evaluation","developer-experience-audit","platform-vs-application"],
+      "reads_from": []
+    }
+,
+    "experiment-design": {
+      "name": "experiment-design",
+      "description": "Help users design and run product experiments — producing experiment briefs, statistical plans, growth loop designs, and results synthesis to systematically convert hypotheses into validated knowledge.",
+      "version": "1.0.0",
+      "category": "planning",
+      "skill_path": "skills/experiment-design/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*experiment-design*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 5
+      },
+      "feeds_into": ["measuring-product-market-fit","user-onboarding-optimization","north-star-metrics"],
+      "reads_from": ["north-star-metrics","feature-prioritization","customer-discovery","prototype-driven-validation","iteration-cadence-design"]
+    }
+,
+    "feature-prioritization": {
+      "name": "feature-prioritization",
+      "description": "Help users prioritize features using a weighted scoring matrix, RICE framework adaptation, and sequencing analysis to produce a ranked backlog, trade-off documentation, and a sequenced roadmap.",
+      "version": "1.0.0",
+      "category": "planning",
+      "skill_path": "skills/feature-prioritization/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*feature-prioritization*.md",
+      "expected_artifacts": ["Classified Feature List","Scoring Criteria Table with definitions, scales, and agreed-upon weights","Scored Feature Matrix","Trade-Off Documentation","Cost-of-Delay Classification Table","Sequenced Roadmap","Prioritization Rationale Memo"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Classified Feature List","Scoring Criteria Table with definitions, scales, and agreed-upon weights","Scored Feature Matrix","Trade-Off Documentation","Cost-of-Delay Classification Table","Sequenced Roadmap","Prioritization Rationale Memo"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["writing-prds-for-ai","zero-to-one-product-launch","stakeholder-alignment","prototype-driven-validation","experiment-design","iteration-cadence-design"],
+      "reads_from": ["north-star-metrics","competitive-response","product-portfolio-strategy","customer-discovery","product-narrative-strategy","product-quality-review"]
+    }
+,
+    "iteration-cadence-design": {
+      "name": "iteration-cadence-design",
+      "description": "Help users design their team's operating rhythm — producing cadence architectures, weekly PM calendars, ritual designs, decision rhythms, and adaptation triggers that replace rigid quarterly planning with shorter, learning-oriented cycles.",
+      "version": "1.0.0",
+      "category": "execution",
+      "skill_path": "skills/iteration-cadence-design/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*iteration-cadence-design*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": ["prototype-driven-validation","experiment-design"],
+      "reads_from": ["stakeholder-alignment","feature-prioritization"]
+    }
+,
+    "mcp-design-review": {
+      "name": "mcp-design-review",
+      "description": "Help users review an MCP server's design quality by assessing tool naming, descriptions, schemas, permission model, and error surfaces — producing a per-tool scorecard, security audit, and prioritized recommendations.",
+      "version": "1.0.0",
+      "category": "agent-first",
+      "skill_path": "skills/mcp-design-review/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*mcp-design-review*.md",
+      "expected_artifacts": ["MCP Tool Inventory","Tool Description Scorecard","Schema Completeness Audit","Permission and Security Assessment","Error Handling Audit","Prioritized Recommendations Table. Complete report"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["MCP Tool Inventory","Tool Description Scorecard","Schema Completeness Audit","Permission and Security Assessment","Error Handling Audit","Prioritized Recommendations Table. Complete report"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": ["agent-journey-mapping","agent-integration-design"],
+      "reads_from": ["agent-surface-audit","api-design-review"]
+    }
+,
+    "measuring-product-market-fit": {
+      "name": "measuring-product-market-fit",
+      "description": "Help users measure product-market fit for new-category products by building a PMF scorecard, tracking leading signals, and making pivot/persevere decisions.",
+      "version": "1.0.0",
+      "category": "strategic",
+      "skill_path": "skills/measuring-product-market-fit/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*measuring-product-market-fit*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 8
+      },
+      "feeds_into": ["zero-to-one-product-launch","north-star-metrics","user-segmentation","product-narrative-strategy"],
+      "reads_from": ["customer-discovery","user-segmentation","experiment-design"]
+    }
+,
+    "north-star-metrics": {
+      "name": "north-star-metrics",
+      "description": "Help users define their North Star Metric, build a metric tree of leading and lagging indicators, design a metrics dashboard, and establish a measurement cadence.",
+      "version": "1.0.0",
+      "category": "planning",
+      "skill_path": "skills/north-star-metrics/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*north-star-metrics*.md",
+      "expected_artifacts": ["A one-paragraph value exchange statement and identification of the core action","North Star Metric definition with name, formula, measurement frequency, and counter-metric","A metric tree diagram","A baselines and targets table with columns: Metric | Baseline | 30-Day Target | 90-Day Target | 12-Month Aspiration | Investigate Threshold","A dashboard specification document with layout, data sources, refresh cadences, alert conditions, and a weekly snapshot template","A measurement cadence document with meeting formats, agendas, attendees","A complete North Star package"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["A one-paragraph value exchange statement and identification of the core action","North Star Metric definition with name, formula, measurement frequency, and counter-metric","A metric tree diagram","A baselines and targets table with columns: Metric | Baseline | 30-Day Target | 90-Day Target | 12-Month Aspiration | Investigate Threshold","A dashboard specification document with layout, data sources, refresh cadences, alert conditions, and a weekly snapshot template","A measurement cadence document with meeting formats, agendas, attendees","A complete North Star package"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["feature-prioritization","user-onboarding-optimization","measuring-product-market-fit","experiment-design"],
+      "reads_from": ["user-segmentation","customer-discovery","experiment-design"]
+    }
+,
+    "partnership-evaluation": {
+      "name": "partnership-evaluation",
+      "description": "Help users evaluate potential partnerships by scoring strategic fit, modeling deal structures, and producing comparative assessments with go/no-go recommendations.",
+      "version": "1.0.0",
+      "category": "analysis",
+      "skill_path": "skills/partnership-evaluation/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*partnership-evaluation*.md",
+      "expected_artifacts": ["Partnership Objectives Brief","Candidate Partner Landscape Map","Strategic Fit Scorecard","Deal Structure Analysis","Risk Assessment Matrix","Partnership Ranking with Go/No-Go Recommendations","Partnership Execution Roadmap"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Partnership Objectives Brief","Candidate Partner Landscape Map","Strategic Fit Scorecard","Deal Structure Analysis","Risk Assessment Matrix","Partnership Ranking with Go/No-Go Recommendations","Partnership Execution Roadmap"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["product-portfolio-strategy","platform-vs-application"],
+      "reads_from": ["ecosystem-health","competitive-response"]
+    }
+,
+    "platform-vs-application": {
+      "name": "platform-vs-application",
+      "description": "Help users decide whether to build a platform, an application, or a hybrid by analyzing ecosystem dynamics, developer economics, and strategic positioning.",
+      "version": "1.0.0",
+      "category": "strategic",
+      "skill_path": "skills/platform-vs-application/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*platform-vs-application*.md",
+      "expected_artifacts": ["Value Chain Map with control point annotations","Platform Viability Scorecard","Platform Economics Model","Ecosystem Design Document","Build/Buy/Partner Matrix","Investment Allocation Recommendation","Platform Strategy Memo"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Value Chain Map with control point annotations","Platform Viability Scorecard","Platform Economics Model","Ecosystem Design Document","Build/Buy/Partner Matrix","Investment Allocation Recommendation","Platform Strategy Memo"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["developer-experience-audit","ecosystem-health","pricing-and-monetization"],
+      "reads_from": ["product-portfolio-strategy","competitive-response"]
+    }
+,
+    "pricing-and-monetization": {
+      "name": "pricing-and-monetization",
+      "description": "Help users design pricing models and monetization strategy by analyzing willingness-to-pay, competitive positioning, and packaging to maximize revenue and adoption.",
+      "version": "1.0.0",
+      "category": "planning",
+      "skill_path": "skills/pricing-and-monetization/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*pricing-and-monetization*.md",
+      "expected_artifacts": ["A Value Architecture document with the core value metric, value chain map, and per-segment value benchmarks,","A Willingness-to-Pay report with price boundaries per segment, competitive price map, and recommended price range,","A Pricing Model Design document specifying the model type, value metric, rate card, tier boundaries, and spending control mechanisms","A Tier Design Matrix with persona mapping, feature allocation, upgrade triggers, and price points for each tier","A Revenue Model spreadsheet or document with three scenarios, sensitivity analysis, and key assumptions documented","A Pricing Experimentation Roadmap with a sequenced list of experiments, hypotheses, and decision criteria,","A complete Pricing Strategy"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["A Value Architecture document with the core value metric, value chain map, and per-segment value benchmarks,","A Willingness-to-Pay report with price boundaries per segment, competitive price map, and recommended price range,","A Pricing Model Design document specifying the model type, value metric, rate card, tier boundaries, and spending control mechanisms","A Tier Design Matrix with persona mapping, feature allocation, upgrade triggers, and price points for each tier","A Revenue Model spreadsheet or document with three scenarios, sensitivity analysis, and key assumptions documented","A Pricing Experimentation Roadmap with a sequenced list of experiments, hypotheses, and decision criteria,","A complete Pricing Strategy"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["feature-prioritization","zero-to-one-product-launch"],
+      "reads_from": ["competitive-response","user-segmentation","vertical-market-assessment"]
+    }
+,
+    "product-narrative-strategy": {
+      "name": "product-narrative-strategy",
+      "description": "Help users craft compelling product narratives — producing vision documents, strategy narratives, roadmap stories, and customer context briefs that align teams around a shared story of where the product is going and why.",
+      "version": "1.0.0",
+      "category": "strategic",
+      "skill_path": "skills/product-narrative-strategy/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*product-narrative-strategy*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 5
+      },
+      "feeds_into": ["stakeholder-alignment","zero-to-one-product-launch","feature-prioritization"],
+      "reads_from": ["product-portfolio-strategy","customer-discovery","measuring-product-market-fit","competitive-response"]
+    }
+,
+    "product-portfolio-strategy": {
+      "name": "product-portfolio-strategy",
+      "description": "Help users define and prioritize a multi-product portfolio by mapping product surfaces, allocating resources across bets, and designing a sequenced roadmap.",
+      "version": "1.0.0",
+      "category": "strategic",
+      "skill_path": "skills/product-portfolio-strategy/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*product-portfolio-strategy*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["feature-prioritization","research-to-product-pipeline","platform-vs-application","pricing-and-monetization","product-narrative-strategy"],
+      "reads_from": ["competitive-response","vertical-market-assessment","measuring-product-market-fit"]
+    }
+,
+    "product-quality-review": {
+      "name": "product-quality-review",
+      "description": "Help users evaluate product quality and craft — producing quality scorecards, taste gap analyses, competitive craft comparisons, and quality improvement roadmaps that distinguish products worth building well from products merely built correctly.",
+      "version": "1.0.0",
+      "category": "analysis",
+      "skill_path": "skills/product-quality-review/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*product-quality-review*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 5
+      },
+      "feeds_into": ["feature-prioritization","prototype-driven-validation"],
+      "reads_from": ["developer-experience-audit","user-onboarding-optimization","customer-discovery"]
+    }
+,
+    "prototype-driven-validation": {
+      "name": "prototype-driven-validation",
+      "description": "Help users replace PRD-first workflows with prototype-first validation — producing prototype briefs, variation matrices, customer test plans, feedback synthesis, and build/kill decisions grounded in real user reactions to tangible artifacts.",
+      "version": "1.0.0",
+      "category": "execution",
+      "skill_path": "skills/prototype-driven-validation/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*prototype-driven-validation*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 5
+      },
+      "feeds_into": ["writing-prds-for-ai","stakeholder-alignment","zero-to-one-product-launch","experiment-design"],
+      "reads_from": ["customer-discovery","feature-prioritization","iteration-cadence-design","product-quality-review"]
+    }
+,
+    "research-to-product-pipeline": {
+      "name": "research-to-product-pipeline",
+      "description": "Help users translate research breakthroughs into shipped products by evaluating readiness, designing productization paths, and managing the research-to-product handoff.",
+      "version": "1.0.0",
+      "category": "strategic",
+      "skill_path": "skills/research-to-product-pipeline/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*research-to-product-pipeline*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["writing-prds-for-ai","zero-to-one-product-launch","stakeholder-alignment"],
+      "reads_from": ["product-portfolio-strategy"]
+    }
+,
+    "stakeholder-alignment": {
+      "name": "stakeholder-alignment",
+      "description": "Help users align cross-functional stakeholders by producing stakeholder maps, RACI matrices, communication plans, decision-making frameworks, and research-product interface designs.",
+      "version": "1.0.0",
+      "category": "execution",
+      "skill_path": "skills/stakeholder-alignment/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*stakeholder-alignment*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": ["iteration-cadence-design"],
+      "reads_from": ["zero-to-one-product-launch","feature-prioritization","research-to-product-pipeline","prototype-driven-validation","product-narrative-strategy"]
+    }
+,
+    "user-onboarding-optimization": {
+      "name": "user-onboarding-optimization",
+      "description": "Help users audit and optimize their product's onboarding flow by mapping the user journey, measuring time-to-value, defining activation metrics, identifying friction points, and producing an improvement roadmap.",
+      "version": "1.0.0",
+      "category": "execution",
+      "skill_path": "skills/user-onboarding-optimization/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*user-onboarding-optimization*.md",
+      "expected_artifacts": ["Onboarding Funnel Map -- a step-by-step table documenting the current new-user journey with estimated time and drop-off risk per step","Time-to-Value Measurement -- a table with current TTV, target TTV, and the gap for each measurement dimension","Activation Metric Definition -- a specification of the activation action, time window, current rate, target rate, and retention correlation","Friction Map -- a scored table of every friction point in the onboarding flow, classified by type and severity","Experiment Backlog -- a prioritized table of 5 onboarding experiments with hypotheses, success metrics, and ICE scores","Onboarding Improvement Roadmap -- a phased plan with experiments, timelines, resource requirements, and success criteria,","Onboarding Audit Report -- the complete compiled document,"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Onboarding Funnel Map -- a step-by-step table documenting the current new-user journey with estimated time and drop-off risk per step","Time-to-Value Measurement -- a table with current TTV, target TTV, and the gap for each measurement dimension","Activation Metric Definition -- a specification of the activation action, time window, current rate, target rate, and retention correlation","Friction Map -- a scored table of every friction point in the onboarding flow, classified by type and severity","Experiment Backlog -- a prioritized table of 5 onboarding experiments with hypotheses, success metrics, and ICE scores","Onboarding Improvement Roadmap -- a phased plan with experiments, timelines, resource requirements, and success criteria,","Onboarding Audit Report -- the complete compiled document,"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["north-star-metrics","measuring-product-market-fit","product-quality-review"],
+      "reads_from": ["zero-to-one-product-launch","user-segmentation","developer-experience-audit","experiment-design"]
+    }
+,
+    "user-segmentation": {
+      "name": "user-segmentation",
+      "description": "Help users define, profile, and prioritize user segments -- producing segment profiles, a prioritization matrix, and cross-segment insights that inform product strategy.",
+      "version": "1.0.0",
+      "category": "analysis",
+      "skill_path": "skills/user-segmentation/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*user-segmentation*.md",
+      "expected_artifacts": ["A segmentation brief","Candidate segment list with a name, one-sentence description, and originating lens","A complete Segment Profile document with one filled template per candidate segment","Prioritization Matrix","Cross-Segment Insight Memo","Product Strategy Input Document containing HXC definition, onboarding critical paths, feature priorities by segment, and segment-specific metric definitions","Complete Segmentation Deliverable"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["A segmentation brief","Candidate segment list with a name, one-sentence description, and originating lens","A complete Segment Profile document with one filled template per candidate segment","Prioritization Matrix","Cross-Segment Insight Memo","Product Strategy Input Document containing HXC definition, onboarding critical paths, feature priorities by segment, and segment-specific metric definitions","Complete Segmentation Deliverable"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["measuring-product-market-fit","pricing-and-monetization","feature-prioritization","north-star-metrics"],
+      "reads_from": ["customer-discovery"]
+    }
+,
+    "vertical-market-assessment": {
+      "name": "vertical-market-assessment",
+      "description": "Help users evaluate and prioritize target verticals by sizing markets, scoring attractiveness, and designing entry strategies with go-to-market sequencing.",
+      "version": "1.0.0",
+      "category": "strategic",
+      "skill_path": "skills/vertical-market-assessment/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*vertical-market-assessment*.md",
+      "expected_artifacts": ["Candidate Vertical List","Market Sizing Table","Vertical Prioritization Matrix","Beachhead Selection Memo and Bowling Alley Sequence Diagram","Entry Strategy Brief for each selected vertical","Go-to-Market Sequencing Timeline with gate criteria","Complete Vertical Market Assessment"],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": ["Candidate Vertical List","Market Sizing Table","Vertical Prioritization Matrix","Beachhead Selection Memo and Bowling Alley Sequence Diagram","Entry Strategy Brief for each selected vertical","Go-to-Market Sequencing Timeline with gate criteria","Complete Vertical Market Assessment"],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["customer-discovery","competitive-response","pricing-and-monetization"],
+      "reads_from": ["user-segmentation","ecosystem-health"]
+    }
+,
+    "writing-prds-for-ai": {
+      "name": "writing-prds-for-ai",
+      "description": "Help users write PRDs for AI/ML-powered products that handle model uncertainty, define evaluation criteria instead of deterministic specs, bridge the research-to-product gap, and specify behavior for probabilistic outputs.",
+      "version": "1.0.0",
+      "category": "planning",
+      "skill_path": "skills/writing-prds-for-ai/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*writing-prds-for-ai*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 8
+      },
+      "feeds_into": ["zero-to-one-product-launch","stakeholder-alignment"],
+      "reads_from": ["feature-prioritization","research-to-product-pipeline","prototype-driven-validation"]
+    }
+,
+    "zero-to-one-product-launch": {
+      "name": "zero-to-one-product-launch",
+      "description": "Help users plan and execute a 0-to-1 product launch with a launch checklist, channel strategy, success metrics, and rollback plan.",
+      "version": "1.0.0",
+      "category": "planning",
+      "skill_path": "skills/zero-to-one-product-launch/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*zero-to-one-product-launch*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": ["user-onboarding-optimization","stakeholder-alignment","north-star-metrics"],
+      "reads_from": ["feature-prioritization","measuring-product-market-fit","writing-prds-for-ai","prototype-driven-validation","product-narrative-strategy"]
+    }
+,
+    "improve": {
+      "name": "improve",
+      "description": "Reflect on a completed skill run, score its effectiveness, and propose one concrete improvement.",
+      "version": "1.0.0",
+      "category": "meta",
+      "skill_path": "_meta/improve/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*improve*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 6
+      },
+      "feeds_into": [],
+      "reads_from": []
+    }
+,
+    "learn": {
+      "name": "learn",
+      "description": "Ingest external PM content (articles, podcasts, transcripts) and propose targeted improvements to existing skills.",
+      "version": "1.0.0",
+      "category": "meta",
+      "skill_path": "_meta/learn/SKILL.md",
+      "output_dir": "applied",
+      "output_pattern": "applied/*learn*.md",
+      "expected_artifacts": [],
+      "quality": {
+        "min_word_count": 500,
+        "required_sections": [],
+        "no_placeholders": ["TODO", "TBD", "PLACEHOLDER", "[INSERT"],
+        "min_sections": 7
+      },
+      "feeds_into": [],
+      "reads_from": []
+    }
+
+  },
+  "collectors": {
+    "github": {
+      "script": "collectors/github_collector.py",
+      "output": "context/signals/github-ecosystem.md"
+    }
+,
+    "hn": {
+      "script": "collectors/hn_collector.py",
+      "output": "context/signals/hackernews-sentiment.md"
+    }
+,
+    "reddit": {
+      "script": "collectors/reddit_collector.py",
+      "output": "context/signals/reddit-discussions.md"
+    }
+,
+    "news": {
+      "script": "collectors/news_collector.py",
+      "output": "context/signals/news-coverage.md"
+    }
+
+  },
+  "generated_at": "2026-03-05T05:37:36Z"
+}

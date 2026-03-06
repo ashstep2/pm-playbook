@@ -1,0 +1,12 @@
+{
+  "name": "pm-playbooks-harness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-healing skill execution harness for PM Playbooks",
+  "scripts": {
+    "validate": "tsx validate-skill-output.ts"
+  },
+  "dependencies": {
+    "tsx": "^4.19.0"
+  }
+}
